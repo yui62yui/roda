@@ -1,16 +1,37 @@
 import { LeftWrapper, RightWrapper, Wrapper } from "./StyledHeader";
-
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
     <Wrapper>
-      <LeftWrapper></LeftWrapper>
+      <Link to={"/"}>
+        <LeftWrapper></LeftWrapper>
+      </Link>
       <RightWrapper>
-        <Link to={"/"}>Home</Link>
-        <Link to={"/about"}>About</Link>
-        <Link to={"/products"}>Products</Link>
-        <Link to={"/contact"}>Contact</Link>
+        <NavLink
+          className={({ isActive }) => (isActive ? "activated" : "")}
+          to={"/"}
+        >
+          Home
+        </NavLink>
+        <NavLink
+          className={({ isActive }) => (isActive ? "activated" : "")}
+          to="/about"
+        >
+          About
+        </NavLink>
+        <NavLink
+          className={({ isActive }) => (isActive ? "activated" : "")}
+          to="/products"
+        >
+          Products
+        </NavLink>
+        <NavLink
+          className={({ isActive }) => (isActive ? "activated" : "")}
+          to="/contact"
+        >
+          Contact
+        </NavLink>
       </RightWrapper>
     </Wrapper>
   );

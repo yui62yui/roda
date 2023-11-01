@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Contact from "./routes/contact/Contact";
 import About from "./routes/about/About";
 import Home from "./routes/home/Home";
@@ -6,30 +6,6 @@ import Products from "./routes/products/Products";
 import Layout from "./components/layout/Layout";
 import styled, { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Layout />,
-    children: [
-      {
-        path: "",
-        element: <Home />,
-      },
-      {
-        path: "about",
-        element: <About />,
-      },
-      {
-        path: "contact",
-        element: <Contact />,
-      },
-      {
-        path: "products",
-        element: <Products />,
-      },
-    ],
-  },
-]);
 
 const Wrapper = styled.div``;
 
@@ -50,7 +26,16 @@ function App() {
   return (
     <Wrapper>
       <GlobalStyles />
-      <RouterProvider router={router} />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/products" element={<Products />} />
+          </Route>
+        </Routes>
+      </Router>
     </Wrapper>
   );
 }
