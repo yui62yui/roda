@@ -16,6 +16,10 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html {
+    font-size: 10px;
+  }
+
   body {
     font-family: 'IBM Plex Sans KR', sans-serif;
     font-family: 'Noto Sans KR', sans-serif;

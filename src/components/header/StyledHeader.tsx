@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   align-items: center;
   width: 100%;
   height: 80px;
-  padding: 0px 50px;
+  padding: 0rem 10rem;
   background-color: #02244f;
 `;
 
@@ -21,13 +21,17 @@ export const LeftWrapper = styled.div`
 
 export const RightWrapper = styled.div`
   display: flex;
-  gap: 40px;
+  justify-content: flex-end;
+  flex-grow: 1;
+  width: 100%;
+  gap: 4rem;
 
   & > a {
     position: relative;
     color: white;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 500;
+    letter-spacing: 0.02rem;
     text-decoration: none;
     transition: all 0.3s ease;
   }
@@ -39,7 +43,7 @@ export const RightWrapper = styled.div`
   & > a::after {
     content: "";
     position: absolute;
-    bottom: -6px;
+    bottom: -0.6rem;
     left: 0;
     width: 100%;
     height: 2px;
@@ -56,7 +60,7 @@ export const RightWrapper = styled.div`
   & > a.activated::after {
     content: "";
     position: absolute;
-    bottom: -6px;
+    bottom: -0.6rem;
     left: 0;
     width: 100%;
     height: 2px;
