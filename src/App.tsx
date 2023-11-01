@@ -3,7 +3,7 @@ import Contact from "./routes/contact/Contact";
 import About from "./routes/about/About";
 import Home from "./routes/home/Home";
 import Products from "./routes/products/Products";
-import Layout from "./components/layout/Layout";
+import Layout from "./common/layout/Layout";
 import styled, { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 

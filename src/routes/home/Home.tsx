@@ -1,7 +1,7 @@
 import { Wrapper } from "./StyledHome";
 
-const home = () => {
-  return <Wrapper>홈</Wrapper>;
+const Home = () => {
+  return <Wrapper>홈입니다홈입니다</Wrapper>;
 };
 
-export default home;
+export default Home;
