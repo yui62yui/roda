@@ -21,8 +21,15 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
+    font-family: 'Roboto Slab', serif;
+    font-family: 'DM Serif Display', serif;
     font-family: 'IBM Plex Sans KR', sans-serif;
-    font-family: 'Noto Sans KR', sans-serif;
+    color: #222;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
   }
 `;
 

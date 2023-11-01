@@ -9,12 +9,12 @@ export const Wrapper = styled.div`
   height: 80px;
   padding: 0rem 10rem;
   background-color: #02244f;
+  z-index: 100;
 `;
 
 export const LeftWrapper = styled.div`
   width: 80px;
   height: 80px;
-  background-color: #999;
   background: url(${process.env.PUBLIC_URL}/image/icon_white.png) no-repeat
     center / cover;
 `;
@@ -29,9 +29,10 @@ export const RightWrapper = styled.div`
   & > a {
     position: relative;
     color: white;
-    font-size: 1.8rem;
+    font-size: 2rem;
+    font-family: "Lato", sans-serif;
     font-weight: 500;
-    letter-spacing: 0.02rem;
+    letter-spacing: 0.08rem;
     text-decoration: none;
     transition: all 0.3s ease;
   }
@@ -43,7 +44,7 @@ export const RightWrapper = styled.div`
   & > a::after {
     content: "";
     position: absolute;
-    bottom: -0.6rem;
+    bottom: -0.8rem;
     left: 0;
     width: 100%;
     height: 2px;
@@ -60,7 +61,7 @@ export const RightWrapper = styled.div`
   & > a.activated::after {
     content: "";
     position: absolute;
-    bottom: -0.6rem;
+    bottom: -0.8rem;
     left: 0;
     width: 100%;
     height: 2px;

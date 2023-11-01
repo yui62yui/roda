@@ -4,6 +4,7 @@ export const Wrapper = styled.div`
   width: 100%;
   height: 180px;
   background-color: #02244f;
+  z-index: 100;
 `;
 
 export const InnerContainer = styled.div`
