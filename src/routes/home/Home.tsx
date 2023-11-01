@@ -1,5 +1,7 @@
+import { Wrapper } from "./StyledHome";
+
 const home = () => {
-  return <div>홈</div>;
+  return <Wrapper>홈</Wrapper>;
 };
 
 export default home;

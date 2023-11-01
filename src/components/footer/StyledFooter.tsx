@@ -1,7 +1,11 @@
-import React from "react";
+import styled from "styled-components";
 
-const StyledFooter = () => {
-  return <div></div>;
-};
+export const Wrapper = styled.div`
+  width: 100%;
+  height: 180px;
+  background-color: #02244f;
+`;
 
-export default StyledFooter;
+export const InnerContainer = styled.div``;
+export const LeftContainer = styled.div``;
+export const RightContainer = styled.div``;

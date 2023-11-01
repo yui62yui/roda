@@ -1,7 +1,7 @@
-import React from "react";
+import { Wrapper } from "./StyledProducts";
 
 const Products = () => {
-  return <div></div>;
+  return <Wrapper></Wrapper>;
 };
 
 export default Products;

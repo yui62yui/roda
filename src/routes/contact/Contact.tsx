@@ -1,7 +1,7 @@
-import React from "react";
+import { Wrapper } from "./StyledContact";
 
 const Contact = () => {
-  return <div></div>;
+  return <Wrapper></Wrapper>;
 };
 
 export default Contact;

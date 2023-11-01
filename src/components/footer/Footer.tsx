@@ -1,5 +1,19 @@
+import {
+  InnerContainer,
+  LeftContainer,
+  RightContainer,
+  Wrapper,
+} from "./StyledFooter";
+
 const Footer = () => {
-  return <div>푸터</div>;
+  return (
+    <Wrapper>
+      <InnerContainer>
+        <LeftContainer></LeftContainer>
+        <RightContainer></RightContainer>
+      </InnerContainer>
+    </Wrapper>
+  );
 };
 
 export default Footer;
