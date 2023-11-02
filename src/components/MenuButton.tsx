@@ -7,6 +7,7 @@ export const ButtonBox = styled.div`
   width: 120px;
   height: 40px;
   padding: 0 20px;
+  border: 2px solid transparent;
   border-radius: 30px;
   background-color: #515f9e;
   color: #fff;
@@ -21,7 +22,8 @@ export const ButtonBox = styled.div`
 
   &:hover {
     transform: scale(110%);
-    background-color: #4c5788;
+    border: 2px solid #fff;
+    background-color: #373d57;
   }
 `;
 

@@ -21,6 +21,8 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
+    width: 100%;
+    height: 100%;
     font-family: 'Roboto Slab', serif;
     font-family: 'DM Serif Display', serif;
     font-family: 'IBM Plex Sans KR', sans-serif;

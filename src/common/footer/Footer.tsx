@@ -18,11 +18,11 @@ const Footer = () => {
         <RightContainer>
           <IconContainer>
             <a
-              href="https://blog.naver.com/music_diary_"
-              title="로다스튜디오 네이버 블로그"
+              href="https://twitter.com/RoDa_Studio_"
+              title="로다스튜디오 X/트위터"
               target="_blank"
             >
-              <img src="/image/blog_logo.png" alt="네이버 블로그 아이콘" />
+              <img src="/image/x_logo.png" alt="X 아이콘" />
             </a>
             <a
               href="https://www.instagram.com/roda_.studio/"
@@ -32,11 +32,11 @@ const Footer = () => {
               <img src="/image/insta_logo.png" alt="인스타그램 아이콘" />
             </a>
             <a
-              href="https://twitter.com/RoDa_Studio_"
-              title="로다스튜디오 X/트위터"
+              href="https://blog.naver.com/music_diary_"
+              title="로다스튜디오 네이버 블로그"
               target="_blank"
             >
-              <img src="/image/x_logo.png" alt="X 아이콘" />
+              <img src="/image/blog_logo.png" alt="네이버 블로그 아이콘" />
             </a>
           </IconContainer>
           <p>COPYRIGHTⓒ by YUI JO ALL RIGHTS RESERVED</p>

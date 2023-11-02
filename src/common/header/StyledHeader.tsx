@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   position: fixed;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,6 +10,7 @@ export const Wrapper = styled.div`
   height: 80px;
   padding: 0rem 10rem;
   background-color: #02244f;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   z-index: 100;
 `;
 

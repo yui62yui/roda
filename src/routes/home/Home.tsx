@@ -27,17 +27,17 @@ const Home = () => {
           <span>
             RoDa Studio
             <br />
-            Naver Place
-            <br />
+            <span>네이버 플레이스 바로가기</span>
           </span>
         </PhotoContainer>
         <BottomContainer>
           <h2>홍대입구 도보 6분거리, 연남동 녹음/촬영 스튜디오</h2>
           <h1>
-            <span>R</span>o<span>D</span>a <span>S</span>t<span>ud</span>io
+            <span>R</span>o<span>D</span>a <span>S</span>t<span>u</span>d
+            <span>i</span>o
           </h1>
           <Link to={"/about"}>
-            <ButtonBox>
+            <ButtonBox className="ButtonBox">
               <span>About</span>
               <svg
                 fill="none"
