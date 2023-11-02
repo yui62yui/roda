@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding-top: 80px;
   background: url(/image/장비3.jpg) no-repeat center/cover;
 
@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
     position: absolute;
     content: "";
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.75);
   }
 `;
@@ -24,7 +24,10 @@ export const InnerContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 40px;
-  z-index: 1000;
+  width: 100%;
+  height: 100vh;
+  padding: 100px 0;
+  z-index: 10;
 
   & > h2 {
     font-size: 2.4rem;

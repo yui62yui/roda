@@ -23,7 +23,7 @@ export const ButtonBox = styled.div`
   &:hover {
     transform: scale(110%);
     border: 2px solid #fff;
-    background-color: #373d57;
+    background-color: #02244f;
   }
 `;
 

@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding-top: 80px;
   color: #fff;
   background: url(${process.env.PUBLIC_URL}/image/장비5.jpg) no-repeat center /
@@ -15,7 +15,7 @@ export const Wrapper = styled.div`
     position: absolute;
     content: "";
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.75);
   }
 
@@ -51,6 +51,11 @@ export const Wrapper = styled.div`
 export const InnerContainer = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 100px 0;
   z-index: 10;
 
   @keyframes innerAnimation {
@@ -73,6 +78,12 @@ export const InnerContainer = styled.div`
   & h1 > span {
     font-weight: 700;
     color: #a0afee;
+  }
+
+  & h1,
+  h2,
+  h3 {
+    cursor: default;
   }
 `;
 
@@ -155,7 +166,7 @@ export const PhotoContainer = styled.a`
       height: 100%;
       border-radius: 50%;
       border: 2px solid #fff;
-      background-color: #373d57;
+      background-color: #02244f;
       z-index: 10;
     }
 
