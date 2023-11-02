@@ -31,6 +31,80 @@ export const Wrapper = styled.div`
     background-color: rgba(0, 0, 0, 0.75);
     z-index: 7;
   }
+
+  & > svg {
+    display: block;
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    z-index: 10;
+  }
+`;
+
+export const ModalContainer = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+
+  & > div > button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 70px;
+    height: 70px;
+    outline: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    transition: 1s;
+    transform: rotate(0);
+
+    &:hover {
+      transform: rotate(180);
+    }
+  }
+`;
+
+export const Arrow = styled.div`
+  width: 80px;
+  height: 80px;
+  color: #fff;
+
+  & > svg {
+    width: 80px;
+    height: 80px;
+    z-index: 1100;
+    cursor: pointer;
+  }
+
+  & > .left {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+  }
+
+  & .right {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+  }
+`;
+
+export const ModalContent = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+
+  & > img {
+    height: 100vh;
+  }
 `;
 
 export const InnerContainer = styled.div`
@@ -38,15 +112,16 @@ export const InnerContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 50px;
   width: 100%;
-  padding: 100px 0;
+  padding: 80px 0;
   z-index: 10;
 
   & > h2 {
     font-size: 2.4rem;
     font-weight: 500;
     letter-spacing: -0.05rem;
+    line-height: 1.5;
     color: #fff;
   }
 
@@ -60,12 +135,35 @@ export const PhotoContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 30px;
+
+  @keyframes menuPhoto {
+    from {
+      opacity: 0%;
+    }
+    to {
+      opacity: 100%;
+    }
+  }
+
+  animation: menuPhoto 2s ease-in-out;
 `;
 
 export const PhotoBox = styled.div`
-  width: 350px;
-  height: 500px;
-  background-color: #999;
+  position: relative;
+  width: 400px;
+  height: 565px;
+
+  & > img {
+    width: 400px;
+    height: 565px;
+    border: 3px solid transparent;
+
+    &:hover {
+      cursor: zoom-in;
+      border: 3px solid #fff;
+      border-radius: 15px;
+    }
+  }
 `;
 
 export const VideoContainer = styled.div`
@@ -107,7 +205,6 @@ export const SubContainer = styled.div`
     width: 230px;
     height: 60px;
     padding: 10px 15px 10px 20px;
-    border: 2px solid #fff;
     background-color: rgba(255, 255, 255, 0);
     color: #fff;
 

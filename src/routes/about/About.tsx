@@ -1,10 +1,13 @@
+import { ButtonBox } from "components/StyledButton";
 import {
+  BottomContainer,
   InnerContainer,
   ListContainer,
   PhotoSlider,
   PhotoSliderContainer,
   Wrapper,
 } from "./StyledAbout";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -21,6 +24,28 @@ const About = () => {
             맨리 VOXBOX / 맨리 CARDIOID 마이크 등 최고급 장비 보유 중!
           </h4>
         </ListContainer>
+        <BottomContainer>
+          <Link to={"/products"}>
+            <ButtonBox className="ButtonBox">
+              <span>Products</span>
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                width={"20px"}
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                ></path>
+              </svg>
+            </ButtonBox>
+          </Link>
+        </BottomContainer>
       </InnerContainer>
     </Wrapper>
   );

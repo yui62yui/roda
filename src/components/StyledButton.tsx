@@ -7,7 +7,7 @@ export const ButtonBox = styled.div`
   width: 120px;
   height: 40px;
   padding: 0 20px;
-  border: 2px solid transparent;
+  border: 2px solid #fff;
   border-radius: 30px;
   background-color: #515f9e;
   color: #fff;

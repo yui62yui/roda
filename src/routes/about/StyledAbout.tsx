@@ -26,9 +26,8 @@ export const InnerContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 40px;
   width: 100%;
-  padding: 100px 0;
+  padding: 60px 0;
   z-index: 10;
 
   & > h2 {
@@ -40,8 +39,9 @@ export const InnerContainer = styled.div`
 `;
 
 export const PhotoSliderContainer = styled.div`
-  width: 750px;
+  width: 800px;
   height: 450px;
+  margin: 30px 0;
   background-color: #999;
 `;
 
@@ -51,16 +51,29 @@ export const ListContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 580px;
-  height: 140px;
+  width: 500px;
+  height: 100px;
   border: 2px solid #fff;
   border-radius: 20px;
 
   & > h4 {
     color: #fff;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 400;
     letter-spacing: -0.05rem;
     line-height: 1.5;
+  }
+`;
+
+export const BottomContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  color: #fff;
+
+  & .ButtonBox {
+    width: 140px;
   }
 `;

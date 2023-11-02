@@ -1,6 +1,10 @@
 import { ButtonBox } from "components/StyledButton";
+import { useState } from "react";
 import {
+  Arrow,
   InnerContainer,
+  ModalContainer,
+  ModalContent,
   PhotoBox,
   PhotoContainer,
   SubContainer,
@@ -9,18 +13,130 @@ import {
 } from "./StyledProducts";
 
 const Products = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [imgNum, setImgNum] = useState(0);
+
+  const setImageNumberHandler = (imageNumber: number) => {
+    setImgNum(imageNumber);
+  };
+
+  const modalHandler = (setState: boolean) => {
+    setIsModalOpen(setState);
+  };
+
   return (
     <Wrapper>
+      {isModalOpen ? (
+        <ModalContainer>
+          {imgNum === 2 ? (
+            <Arrow
+              onClick={() => {
+                setImageNumberHandler(1);
+              }}
+            >
+              <svg
+                className="left"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                  d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z"
+                ></path>
+              </svg>
+            </Arrow>
+          ) : (
+            <></>
+          )}
+          <div
+            onClick={() => {
+              modalHandler(false);
+            }}
+          >
+            <ModalContent>
+              <img src={`/image/price${imgNum}.jpg`} className="hidden" />
+            </ModalContent>
+            <button
+              onClick={() => {
+                modalHandler(false);
+              }}
+            >
+              <svg
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z"></path>
+              </svg>
+            </button>
+          </div>
+          {imgNum === 1 ? (
+            <Arrow
+              onClick={() => {
+                setImageNumberHandler(2);
+              }}
+            >
+              <svg
+                className="right"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                ></path>
+              </svg>
+            </Arrow>
+          ) : (
+            <></>
+          )}
+        </ModalContainer>
+      ) : (
+        <></>
+      )}
       <InnerContainer>
         <h2>
           RoDa와 함께 당신의 꿈을 실현해 보세요! <br />
           RoDa만의 최고의 가격, 최고의 퀄리티 서비스
         </h2>
         <PhotoContainer>
-          <PhotoBox>사진 삽입</PhotoBox>
-          <PhotoBox>사진 삽입</PhotoBox>
+          <PhotoBox
+            onClick={() => {
+              setImageNumberHandler(1);
+              modalHandler(true);
+            }}
+          >
+            <img src="/image/price1.jpg" alt="가격표1" />
+          </PhotoBox>
+          <PhotoBox
+            onClick={() => {
+              setImageNumberHandler(2);
+              modalHandler(true);
+            }}
+          >
+            <img src="/image/price2.jpg" alt="가격표2" />
+          </PhotoBox>
         </PhotoContainer>
       </InnerContainer>
+      <svg
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <path
+          clip-rule="evenodd"
+          fill-rule="evenodd"
+          d="M14.77 4.21a.75.75 0 01.02 1.06l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 011.08-1.04L10 8.168l3.71-3.938a.75.75 0 011.06-.02zm0 6a.75.75 0 01.02 1.06l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 111.08-1.04L10 14.168l3.71-3.938a.75.75 0 011.06-.02z"
+        ></path>
+      </svg>
       <InnerContainer>
         <h2>RoDa만의 특별한 보컬 녹음클래스</h2>
         <VideoContainer>
