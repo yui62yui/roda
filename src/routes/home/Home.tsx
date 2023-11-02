@@ -1,4 +1,4 @@
-import { ButtonBox } from "components/MenuButton";
+import { ButtonBox } from "components/StyledButton";
 import {
   BottomContainer,
   InnerContainer,

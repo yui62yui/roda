@@ -6,12 +6,15 @@ export const Wrapper = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
+  min-height: 100vh;
   padding-top: 80px;
   background: url(/image/장비3.jpg) no-repeat center/cover;
 
   &::after {
-    position: absolute;
     content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.75);
@@ -25,7 +28,6 @@ export const InnerContainer = styled.div`
   align-items: center;
   gap: 40px;
   width: 100%;
-  height: 100vh;
   padding: 100px 0;
   z-index: 10;
 
