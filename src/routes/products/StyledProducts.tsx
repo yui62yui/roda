@@ -123,13 +123,19 @@ export const ModalContent = styled.div`
   height: 100vh;
 
   & > img {
-    position: absolute;
-    top: auto;
-    bottom: auto;
-    left: auto;
-    right: auto;
-    transform: translate(-50%, 50%);
-    width: 80%;
+    height: 100vh;
+  }
+
+  @media screen and (max-width: 500px) {
+    & > img {
+      position: absolute;
+      top: auto;
+      bottom: auto;
+      left: auto;
+      right: auto;
+      transform: translate(-50%, 50%);
+      width: 80%;
+    }
   }
 `;
 
