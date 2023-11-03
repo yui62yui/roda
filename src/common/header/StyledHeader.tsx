@@ -9,13 +9,20 @@ export const Wrapper = styled.div`
   width: 100%;
   min-width: 980px;
   height: 80px;
-  padding: 0rem 10rem;
+  padding: 0rem 1rem;
   background-color: #02244f;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   z-index: 100;
+
+  @media screen and (max-width: 500px) {
+    min-width: 320px;
+  }
 `;
 
 export const LeftWrapper = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  flex-grow: 1;
   width: 80px;
   height: 80px;
   background: url(${process.env.PUBLIC_URL}/image/icon_white.png) no-repeat
@@ -38,6 +45,10 @@ export const RightWrapper = styled.div`
     letter-spacing: 0.08rem;
     text-decoration: none;
     transition: all 0.3s ease;
+
+    @media screen and (max-width: 500px) {
+      font-size: 1.6rem;
+    }
   }
 
   & > a:hover {
@@ -71,5 +82,10 @@ export const RightWrapper = styled.div`
     transform: scaleX(100%);
     transition: 0.3s;
     background-color: white;
+  }
+
+  @media screen and (max-width: 500px) {
+    justify-content: flex-end;
+    gap: 1.5rem;
   }
 `;

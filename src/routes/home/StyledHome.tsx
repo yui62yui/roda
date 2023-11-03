@@ -18,11 +18,14 @@ export const Wrapper = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 200vh;
     background-color: rgba(0, 0, 0, 0.75);
   }
 
   & .ButtonBox {
+    @media screen and (max-width: 500px) {
+      width: 110px;
+    }
     @keyframes buttonAnimation {
       0% {
         transform: scale(100%);
@@ -48,6 +51,10 @@ export const Wrapper = styled.div`
     animation-timing-function: linear;
     animation-iteration-count: 1;
     animation-direction: alternate;
+  }
+
+  @media screen and (max-width: 500px) {
+    min-width: 320px;
   }
 `;
 
@@ -97,11 +104,15 @@ export const TopContainer = styled.div`
     font-size: 3rem;
     letter-spacing: 0.1rem;
 
+    @media screen and (max-width: 500px) {
+      font-size: 2.5rem;
+    }
+
     &::after {
       content: "";
       left: -5%;
       position: absolute;
-      bottom: -12px;
+      bottom: -1.2rem;
       width: 110%;
       height: 2px;
       background-color: #fff;
@@ -131,9 +142,9 @@ export const TopContainer = styled.div`
 
 export const PhotoContainer = styled.a`
   position: relative;
-  width: 600px;
-  height: 200px;
-  margin: 50px 0 40px;
+  width: 60rem;
+  height: 20rem;
+  margin: 5rem 0 4rem;
   border-radius: 100%;
   background: url(${process.env.PUBLIC_URL}/image/icon2.png) no-repeat center /
     55%;
@@ -155,6 +166,11 @@ export const PhotoContainer = styled.a`
       font-family: "IBM Plex Sans KR", sans-serif;
       letter-spacing: -0.1rem;
     }
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 30rem;
+    height: 10rem;
   }
 
   &:hover {
@@ -189,14 +205,22 @@ export const BottomContainer = styled.div`
   & > h2 {
     font-size: 1.8rem;
     letter-spacing: -0.1rem;
+
+    @media screen and (max-width: 500px) {
+      font-size: 1.6rem;
+    }
   }
 
   & > h1 {
-    margin: 12px 0px 30px;
+    margin: 1.2rem 0rem 3rem;
     font-family: "Roboto Slab", serif;
     font-style: italic;
     font-size: 3.2rem;
     font-weight: 700;
     letter-spacing: 0.3rem;
+
+    @media screen and (max-width: 500px) {
+      font-size: 2.5rem;
+    }
   }
 `;

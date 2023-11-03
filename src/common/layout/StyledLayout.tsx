@@ -10,4 +10,8 @@ export const Wrapper = styled.div`
   min-width: 980px;
   height: 100%;
   background-color: #fefefe;
+
+  @media screen and (max-width: 500px) {
+    min-width: 320px;
+  }
 `;

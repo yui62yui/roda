@@ -2,9 +2,12 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   width: 100%;
-  height: 180px;
   background-color: #02244f;
   z-index: 100;
+
+  @media screen and (max-width: 500px) {
+    min-width: 320px;
+  }
 `;
 
 export const InnerContainer = styled.div`
@@ -15,6 +18,11 @@ export const InnerContainer = styled.div`
   height: 100%;
   padding: 4rem 10rem;
   color: white;
+
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+    gap: 20px;
+  }
 `;
 export const LeftContainer = styled.div`
   display: flex;
@@ -38,6 +46,10 @@ export const LeftContainer = styled.div`
     font-weight: 400;
     letter-spacing: 0.05rem;
   }
+
+  @media screen and (max-width: 500px) {
+    align-items: center;
+  }
 `;
 export const RightContainer = styled.div`
   display: flex;
@@ -51,6 +63,9 @@ export const RightContainer = styled.div`
     font-weight: 400;
     letter-spacing: 0.05rem;
   }
+  @media screen and (max-width: 500px) {
+    align-items: center;
+  }
 `;
 export const IconContainer = styled.div`
   display: flex;
@@ -60,15 +75,15 @@ export const IconContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60px;
-    height: 60px;
+    width: 6rem;
+    height: 6rem;
     background-color: #fff;
     border-radius: 50%;
     cursor: pointer;
 
     & > img {
-      width: 30px;
-      height: 30px;
+      width: 3rem;
+      height: 3rem;
     }
   }
 `;
