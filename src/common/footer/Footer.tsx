@@ -39,7 +39,7 @@ const Footer = () => {
               <img src="/image/blog_logo.png" alt="네이버 블로그 아이콘" />
             </a>
           </IconContainer>
-          <p>COPYRIGHTⓒ by YUI JO ALL RIGHTS RESERVED</p>
+          <p>COPYRIGHTⓒ by YUI ALL RIGHTS RESERVED</p>
         </RightContainer>
       </InnerContainer>
     </Wrapper>
