@@ -16,8 +16,12 @@ export const Wrapper = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 200vh;
     background-color: rgba(0, 0, 0, 0.75);
+  }
+
+  @media screen and (max-width: 500px) {
+    min-width: 320px;
   }
 `;
 
@@ -27,7 +31,7 @@ export const InnerContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 60px 0;
+  padding: 6rem 0;
   z-index: 10;
 
   & > h2 {
@@ -35,13 +39,16 @@ export const InnerContainer = styled.div`
     font-weight: 500;
     letter-spacing: -0.05rem;
     color: #fff;
+    @media screen and (max-width: 500px) {
+      font-size: 2rem;
+    }
   }
 `;
 
 export const PhotoSliderContainer = styled.div`
-  width: 800px;
-  height: 450px;
-  margin: 30px 0;
+  width: 80rem;
+  height: 45rem;
+  margin: 3rem 0;
   @keyframes startAnimation {
     from {
       opacity: 0%;
@@ -52,16 +59,26 @@ export const PhotoSliderContainer = styled.div`
   }
 
   animation: startAnimation 1s ease-in;
+
+  @media screen and (max-width: 500px) {
+    width: 30rem;
+    height: 20rem;
+  }
 `;
 
 export const ListContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 500px;
-  height: 100px;
+  width: 50rem;
+  height: 10rem;
   border: 2px solid #fff;
-  border-radius: 20px;
+  border-radius: 2rem;
+
+  @media screen and (max-width: 500px) {
+    width: 35rem;
+    height: 10rem;
+  }
 
   & > h4 {
     color: #fff;
@@ -69,6 +86,10 @@ export const ListContainer = styled.div`
     font-weight: 400;
     letter-spacing: -0.05rem;
     line-height: 1.5;
+
+    @media screen and (max-width: 500px) {
+      font-size: 1.2rem;
+    }
   }
   @keyframes startAnimation {
     0% {
@@ -95,6 +116,10 @@ export const BottomContainer = styled.div`
 
   & .ButtonBox {
     width: 140px;
+
+    @media screen and (max-width: 500px) {
+      width: 130px;
+    }
   }
 
   @keyframes startAnimation {

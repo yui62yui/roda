@@ -14,10 +14,15 @@ const GlobalStyles = createGlobalStyle`
   ${reset}
   * {
     box-sizing: border-box;
+    word-break: keep-all;
   }
 
   html {
     font-size: 10px;
+
+    @media screen and (max-width: 500px) {
+    font-size: 8px;
+  }
   }
 
   body {
