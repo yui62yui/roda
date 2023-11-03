@@ -72,7 +72,6 @@ export const LeftContainer = styled.div`
 export const MapContainer = styled.div`
   width: 400px;
   height: 400px;
-  background-color: #999;
 `;
 export const AddressContainer = styled.div`
   display: flex;

@@ -11,6 +11,7 @@ import {
   TopBox,
   Wrapper,
 } from "./StyledContact";
+import NaverMap from "components/NaverMap";
 
 const Contact = () => {
   const handleCopyClick = (target: string, textToCopy: string) => {
@@ -27,7 +28,9 @@ const Contact = () => {
     <Wrapper>
       <InnerContainer>
         <LeftContainer>
-          <MapContainer>네이버지도 API</MapContainer>
+          <MapContainer>
+            <NaverMap></NaverMap>
+          </MapContainer>
           <AddressContainer>
             <TopBox>
               <p>서울시 마포구 연남동 연남로 1길 22(연남동) 2층</p>
