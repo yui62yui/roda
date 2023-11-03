@@ -42,7 +42,6 @@ export const PhotoSliderContainer = styled.div`
   width: 800px;
   height: 450px;
   margin: 30px 0;
-  background-color: #999;
   @keyframes startAnimation {
     from {
       opacity: 0%;
@@ -54,8 +53,6 @@ export const PhotoSliderContainer = styled.div`
 
   animation: startAnimation 1s ease-in;
 `;
-
-export const PhotoSlider = styled.div``;
 
 export const ListContainer = styled.div`
   display: flex;

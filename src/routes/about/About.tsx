@@ -3,12 +3,12 @@ import {
   BottomContainer,
   InnerContainer,
   ListContainer,
-  PhotoSlider,
   PhotoSliderContainer,
   Wrapper,
 } from "./StyledAbout";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import PhotoSlider from "components/photoSlider/PhotoSlider";
 
 const About = () => {
   useEffect(() => {
@@ -22,7 +22,7 @@ const About = () => {
       <InnerContainer>
         <h2>최고급 장비로 녹음 / 믹싱 / 촬영을 한 번에!</h2>
         <PhotoSliderContainer>
-          <PhotoSlider>사진 삽입</PhotoSlider>
+          <PhotoSlider></PhotoSlider>
         </PhotoSliderContainer>
         <ListContainer>
           <h4>
