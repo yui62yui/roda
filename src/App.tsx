@@ -14,6 +14,7 @@ const GlobalStyles = createGlobalStyle`
   ${reset}
   * {
     box-sizing: border-box;
+    word-break: keep-all;
   }
 
   html {

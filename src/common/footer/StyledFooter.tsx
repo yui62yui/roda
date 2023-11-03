@@ -4,6 +4,7 @@ export const Wrapper = styled.div`
   width: 100%;
   background-color: #02244f;
   z-index: 100;
+  line-height: 1.3;
 
   @media screen and (max-width: 500px) {
     min-width: 320px;
@@ -22,6 +23,7 @@ export const InnerContainer = styled.div`
   @media screen and (max-width: 500px) {
     flex-direction: column;
     gap: 20px;
+    padding: 4rem;
   }
 `;
 export const LeftContainer = styled.div`

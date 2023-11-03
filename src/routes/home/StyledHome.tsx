@@ -171,6 +171,10 @@ export const PhotoContainer = styled.a`
   @media screen and (max-width: 500px) {
     width: 30rem;
     height: 10rem;
+
+    & > span {
+      font-size: 2rem;
+    }
   }
 
   &:hover {

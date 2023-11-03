@@ -16,7 +16,7 @@ export const Wrapper = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 200vh;
     background-color: rgba(0, 0, 0, 0.75);
   }
 
@@ -39,6 +39,9 @@ export const InnerContainer = styled.div`
     font-weight: 500;
     letter-spacing: -0.05rem;
     color: #fff;
+    @media screen and (max-width: 500px) {
+      font-size: 2rem;
+    }
   }
 `;
 

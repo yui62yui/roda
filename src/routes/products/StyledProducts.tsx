@@ -27,7 +27,7 @@ export const Wrapper = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 200vh;
     background-color: rgba(0, 0, 0, 0.75);
     z-index: 7;
   }
@@ -44,6 +44,10 @@ export const Wrapper = styled.div`
     width: 130px;
     padding: 0px 18px;
   }
+
+  @media screen and (max-width: 500px) {
+    min-width: 320px;
+  }
 `;
 
 export const ModalContainer = styled.div`
@@ -55,12 +59,15 @@ export const ModalContainer = styled.div`
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 1000;
 
+  @media screen and (max-width: 500px) {
+  }
+
   & > div > button {
     position: absolute;
     right: 0;
     top: 0;
-    width: 70px;
-    height: 70px;
+    width: 7rem;
+    height: 7rem;
     outline: none;
     background: transparent;
     border: none;
@@ -76,13 +83,13 @@ export const ModalContainer = styled.div`
 `;
 
 export const Arrow = styled.div`
-  width: 80px;
-  height: 80px;
+  width: 8rem;
+  height: 8rem;
   color: #fff;
 
   & > svg {
-    width: 80px;
-    height: 80px;
+    width: 8rem;
+    height: 8rem;
     z-index: 1100;
     cursor: pointer;
   }
@@ -90,13 +97,21 @@ export const Arrow = styled.div`
   & > .left {
     position: absolute;
     top: 50%;
-    left: 10px;
+    left: 1rem;
+    @media screen and (max-width: 500px) {
+      width: 50px;
+      left: -1rem;
+    }
   }
 
-  & .right {
+  & > .right {
     position: absolute;
     top: 50%;
-    right: 10px;
+    right: 1rem;
+    @media screen and (max-width: 500px) {
+      width: 50px;
+      right: -1rem;
+    }
   }
 `;
 
@@ -108,7 +123,13 @@ export const ModalContent = styled.div`
   height: 100vh;
 
   & > img {
-    height: 100vh;
+    position: absolute;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    transform: translate(-50%, 50%);
+    width: 80%;
   }
 `;
 
@@ -117,7 +138,7 @@ export const InnerContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 5rem;
   width: 100%;
   padding: 80px 0;
   z-index: 10;
@@ -128,6 +149,10 @@ export const InnerContainer = styled.div`
     letter-spacing: -0.05rem;
     line-height: 1.5;
     color: #fff;
+
+    @media screen and (max-width: 500px) {
+      font-size: 2rem;
+    }
   }
 
   &:last-child {
@@ -139,7 +164,11 @@ export const PhotoContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 3rem;
+
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+  }
 
   @keyframes menuPhoto {
     from {
@@ -155,13 +184,15 @@ export const PhotoContainer = styled.div`
 
 export const PhotoBox = styled.div`
   position: relative;
-  width: 400px;
-  height: 565px;
+  width: 40rem;
 
   & > img {
-    width: 400px;
-    height: 565px;
+    width: 40rem;
     border: 3px solid transparent;
+
+    @media screen and (max-width: 500px) {
+      width: 30rem;
+    }
 
     &:hover {
       cursor: zoom-in;
@@ -172,22 +203,35 @@ export const PhotoBox = styled.div`
 `;
 
 export const VideoContainer = styled.div`
-  width: 800px;
-  height: 450px;
-  background-color: #999;
+  position: relative;
+  width: 80%;
+  height: auto;
+  padding-top: 50%;
+
+  & > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 `;
 export const SubContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  width: 600px;
-  padding: 30px 0;
+  gap: 2rem;
+  width: 60rem;
+  padding: 3rem 0;
   border: 2px solid #fff;
   border-radius: 20px;
   transition: 0.3s;
   cursor: default;
+
+  @media screen and (max-width: 500px) {
+    width: 35rem;
+  }
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.1);
@@ -204,6 +248,10 @@ export const SubContainer = styled.div`
     font-weight: 400;
     letter-spacing: -0.05rem;
     line-height: 1.5;
+
+    @media screen and (max-width: 500px) {
+      font-size: 1.4rem;
+    }
   }
 
   & .ButtonBox {
@@ -213,10 +261,19 @@ export const SubContainer = styled.div`
     background-color: rgba(255, 255, 255, 0);
     color: #fff;
 
+    @media screen and (max-width: 500px) {
+      width: 200px;
+      height: 50px;
+    }
+
     & > img {
       width: 35px;
       border-radius: 3px;
       margin-right: 15px;
+
+      @media screen and (max-width: 500px) {
+        width: 28px;
+      }
     }
 
     & > span {
