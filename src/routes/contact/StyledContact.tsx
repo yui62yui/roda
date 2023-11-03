@@ -16,7 +16,7 @@ export const Wrapper = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 200vh;
     background-color: rgba(0, 0, 0, 0.75);
   }
 
@@ -37,7 +37,7 @@ export const InnerContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 40px;
-  margin: 80px;
+  margin: 8rem;
   padding: 30px;
   border-radius: 30px;
   z-index: 10;
@@ -66,18 +66,31 @@ export const LeftContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  width: 400px;
+  width: 40rem;
   height: 100%;
+
+  @media screen and (max-width: 500px) {
+    width: 30rem;
+  }
 `;
 export const MapContainer = styled.div`
-  width: 400px;
-  height: 400px;
+  width: 40rem;
+  height: 40rem;
+
+  @media screen and (max-width: 500px) {
+    width: 30rem;
+    height: 30rem;
+  }
 `;
 export const AddressContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 100%;
+  width: 40rem;
+
+  @media screen and (max-width: 500px) {
+    width: 30rem;
+  }
 `;
 export const TopBox = styled.div`
   display: flex;
@@ -89,6 +102,11 @@ export const TopBox = styled.div`
   font-size: 1.4rem;
   font-weight: 500;
   background-color: #fff;
+
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+    gap: 10px;
+  }
 
   & > button {
     padding: 3px 8px;
@@ -123,6 +141,11 @@ export const BottomBox = styled.div`
   & span {
     font-weight: 600;
   }
+
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+    font-size: 1.2rem;
+  }
 `;
 
 export const RightContainer = styled.div`
@@ -132,7 +155,11 @@ export const RightContainer = styled.div`
   align-items: flex-start;
   gap: 30px;
   text-align: left;
-  width: 300px;
+  width: 30rem;
+
+  @media screen and (max-width: 500px) {
+    width: 25rem;
+  }
 
   & h4 {
     font-size: 2.8rem;

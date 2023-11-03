@@ -36,6 +36,10 @@ const NaverMap = () => {
 export default NaverMap;
 
 const Wrapper = styled.div`
-  width: 400px;
-  height: 400px;
+  width: 40rem;
+  height: 40rem;
+  @media screen and (max-width: 500px) {
+    width: 30rem;
+    height: 30rem;
+  }
 `;

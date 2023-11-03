@@ -148,8 +148,6 @@ const Products = () => {
         <h2>RoDa만의 특별한 보컬 녹음클래스</h2>
         <VideoContainer>
           <iframe
-            width="800"
-            height="450"
             src="https://www.youtube.com/embed/XL0bxzM1OWA?si=mZmrIzjEcvcwv6az&amp;controls=0"
             title="원데이 보컬 클래스 영상"
             allowFullScreen
