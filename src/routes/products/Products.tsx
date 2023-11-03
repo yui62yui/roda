@@ -1,5 +1,5 @@
 import { ButtonBox } from "components/StyledButton";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Arrow,
   InnerContainer,
@@ -11,10 +11,17 @@ import {
   VideoContainer,
   Wrapper,
 } from "./StyledProducts";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [imgNum, setImgNum] = useState(0);
+
+  useEffect(() => {
+    return () => {
+      window.scrollTo(0, 0);
+    };
+  }, []);
 
   const setImageNumberHandler = (imageNumber: number) => {
     setImgNum(imageNumber);
@@ -182,6 +189,26 @@ const Products = () => {
             </ButtonBox>
           </a>
         </SubContainer>
+        <Link to={"/contact"}>
+          <ButtonBox className="ButtonBox">
+            <span>Contact</span>
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              width={"20px"}
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+              ></path>
+            </svg>
+          </ButtonBox>
+        </Link>
       </InnerContainer>
     </Wrapper>
   );

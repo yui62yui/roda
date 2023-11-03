@@ -6,10 +6,15 @@ import {
   TopContainer,
   Wrapper,
 } from "./StyledHome";
-
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Home = () => {
+  useEffect(() => {
+    return () => {
+      window.scrollTo(0, 0);
+    };
+  }, []);
   return (
     <Wrapper>
       <InnerContainer>

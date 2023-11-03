@@ -8,8 +8,15 @@ import {
   Wrapper,
 } from "./StyledAbout";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const About = () => {
+  useEffect(() => {
+    return () => {
+      window.scrollTo(0, 0);
+    };
+  }, []);
+
   return (
     <Wrapper>
       <InnerContainer>

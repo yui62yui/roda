@@ -39,6 +39,11 @@ export const Wrapper = styled.div`
     color: #fff;
     z-index: 10;
   }
+
+  & .ButtonBox {
+    width: 130px;
+    padding: 0px 18px;
+  }
 `;
 
 export const ModalContainer = styled.div`
