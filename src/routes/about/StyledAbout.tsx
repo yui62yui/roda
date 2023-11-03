@@ -43,6 +43,16 @@ export const PhotoSliderContainer = styled.div`
   height: 450px;
   margin: 30px 0;
   background-color: #999;
+  @keyframes startAnimation {
+    from {
+      opacity: 0%;
+    }
+    to {
+      opacity: 100%;
+    }
+  }
+
+  animation: startAnimation 1s ease-in;
 `;
 
 export const PhotoSlider = styled.div``;
@@ -63,6 +73,19 @@ export const ListContainer = styled.div`
     letter-spacing: -0.05rem;
     line-height: 1.5;
   }
+  @keyframes startAnimation {
+    0% {
+      opacity: 0%;
+    }
+    50% {
+      opacity: 0%;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+
+  animation: startAnimation 2s ease-in;
 `;
 
 export const BottomContainer = styled.div`
@@ -76,4 +99,18 @@ export const BottomContainer = styled.div`
   & .ButtonBox {
     width: 140px;
   }
+
+  @keyframes startAnimation {
+    0% {
+      opacity: 0%;
+    }
+    50% {
+      opacity: 0%;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+
+  animation: startAnimation 3s ease-in;
 `;

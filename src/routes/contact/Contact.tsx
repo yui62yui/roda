@@ -13,8 +13,6 @@ import {
 } from "./StyledContact";
 
 const Contact = () => {
-  const rodaEmail = "roda.eent@gmail.com";
-
   const handleCopyClick = (target: string, textToCopy: string) => {
     navigator.clipboard.writeText(textToCopy);
     alert(`로다스튜디오의 ${target}를 클립보드에 복사하였어요🥰!`);
@@ -67,6 +65,7 @@ const Contact = () => {
         <RightContainer>
           <ContactContainer>
             <h4>Contact</h4>
+            <p>아이콘 클릭 시 번호/이메일이 복사됩니다!🙇‍♀️</p>
             <ContactBox className="Phone">
               <div
                 onClick={() => {
@@ -89,8 +88,9 @@ const Contact = () => {
               <p>010-6502-1937</p>
             </ContactBox>
 
-            <ContactBox className="Email">
+            <ContactBox>
               <div
+                className="Email"
                 onClick={() => {
                   handleCopyClick("이메일주소", "roda.eent@gmail.com");
                 }}

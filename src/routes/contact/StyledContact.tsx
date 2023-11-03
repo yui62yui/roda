@@ -41,7 +41,23 @@ export const InnerContainer = styled.div`
   padding: 30px;
   border-radius: 30px;
   z-index: 10;
-  background-color: #e7e7e7;
+  background-color: #efefef;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: #e7e7e7;
+  }
+
+  @keyframes startAnimation {
+    from {
+      opacity: 0%;
+    }
+    to {
+      opacity: 100%;
+    }
+  }
+
+  animation: startAnimation 0.8s ease-in;
 `;
 
 export const LeftContainer = styled.div`
@@ -123,13 +139,21 @@ export const RightContainer = styled.div`
     font-size: 2.8rem;
     font-family: "Roboto Slab", serif;
     font-weight: 500;
-    margin-bottom: 10px;
   }
 `;
 export const ContactContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
+
+  & > p {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+  }
+
+  &:last-child h4 {
+    margin-bottom: 10px;
+  }
 `;
 export const ContactBox = styled.div`
   display: flex;
@@ -147,9 +171,9 @@ export const ContactBox = styled.div`
     border: 3px solid #fff;
     background-color: #f2f2f2;
     transition: 0.3s;
+    cursor: pointer;
 
     &:hover {
-      cursor: pointer;
       background-color: #fff;
     }
   }
