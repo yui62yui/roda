@@ -13,7 +13,7 @@ const Footer = () => {
         <LeftContainer>
           <p>TEL. 010-6502-1937</p>
           <p>운영시간: 10:00AM - 22:00PM</p>
-          <p>서울특별시 마포구 연남동 연남로1길</p>
+          <p>서울특별시 마포구 연남동 연남로1길 22(연남동) 2층</p>
         </LeftContainer>
         <RightContainer>
           <IconContainer>
