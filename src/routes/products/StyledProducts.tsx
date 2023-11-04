@@ -129,12 +129,11 @@ export const ModalContent = styled.div`
   @media screen and (max-width: 500px) {
     & > img {
       position: absolute;
-      top: auto;
-      bottom: auto;
-      left: auto;
-      right: auto;
-      transform: translate(-50%, 50%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       width: 80%;
+      height: auto;
     }
   }
 `;
@@ -210,7 +209,7 @@ export const PhotoBox = styled.div`
 
 export const VideoContainer = styled.div`
   position: relative;
-  width: 80%;
+  width: 60%;
   height: auto;
   padding-top: 50%;
 
