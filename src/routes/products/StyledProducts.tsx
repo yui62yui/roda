@@ -98,9 +98,10 @@ export const Arrow = styled.div`
     position: absolute;
     top: 50%;
     left: 1rem;
+    transform: translateY(-50%);
     @media screen and (max-width: 500px) {
       width: 50px;
-      left: -1rem;
+      left: -0.5rem;
     }
   }
 
@@ -108,9 +109,10 @@ export const Arrow = styled.div`
     position: absolute;
     top: 50%;
     right: 1rem;
+    transform: translateY(-50%);
     @media screen and (max-width: 500px) {
       width: 50px;
-      right: -1rem;
+      right: -0.5rem;
     }
   }
 `;
