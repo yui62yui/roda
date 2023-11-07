@@ -37,10 +37,7 @@ const Home = () => {
         </PhotoContainer>
         <BottomContainer>
           <h2>홍대입구 도보 8분거리, 연남동 녹음/촬영 스튜디오</h2>
-          <h1>
-            <span>R</span>o<span>D</span>a <span>S</span>t<span>u</span>d
-            <span>i</span>o
-          </h1>
+          <h1>RoDa Studio</h1>
           <Link to={"/about"}>
             <ButtonBox className="ButtonBox">
               <span>About</span>
