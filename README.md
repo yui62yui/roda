@@ -8,4 +8,6 @@
 
 디자인 및 개발 기간 23.10.20 ~ 23.11.04
 
-![Uploading image.png…]()
+
+### 와이어프레임
+![wireframe](https://github.com/yui62yui/roda/assets/133616906/082d4cb8-c145-4480-824a-b7090371fd41)
